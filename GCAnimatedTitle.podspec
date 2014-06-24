@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "GCAnimatedTitle"
-  s.version      = "0.2"
+  s.version      = "0.3"
   s.summary      = "A Twitter-like navigation bar title (using a UIScrollView)."
 
   s.homepage     = "https://github.com/aout/GCAnimatedTitle"
@@ -12,10 +12,10 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, '5.0'
 
-  s.source       = { :git => "https://github.com/aout/GCAnimatedTitle.git", :tag => "0.2" }
+  s.source       = { :git => "https://github.com/aout/GCAnimatedTitle.git", :tag => "0.3" }
 
-  s.source_files  = "Classes"
-  s.public_header_files = "Classes/*.h"
+  s.source_files  = "AnimatedTitle/Classes"
+  s.public_header_files = "AnimatedTitle/Classes/*.h"
 
   s.requires_arc = true
 end
