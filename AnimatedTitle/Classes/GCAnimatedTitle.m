@@ -7,6 +7,7 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
+#import <Interpolate.h>
 
 #import "GCAnimatedTitle.h"
 
@@ -208,13 +209,6 @@
     float newScrollPos = interpolate(start, end, newProgress);
     
     self.scrollView.contentOffset = CGPointMake(newScrollPos, 0);
-}
-
-#pragma mark - C Helper
-
-float interpolate(float min, float max, float t)
-{
-    return min + (max - min) * t;
 }
 
 @end
