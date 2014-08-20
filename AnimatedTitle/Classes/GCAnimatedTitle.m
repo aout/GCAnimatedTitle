@@ -61,10 +61,12 @@
     CGColorRef innerColor = [UIColor colorWithWhite:1.0 alpha:1.0].CGColor;
     
     self.maskLayer.colors = [NSArray arrayWithObjects:(__bridge id)outerColor,
+                             (__bridge id)outerColor,
                              (__bridge id)innerColor,
                              (__bridge id)innerColor,
                              (__bridge id)outerColor, nil];
     self.maskLayer.locations = [NSArray arrayWithObjects:[NSNumber numberWithFloat:0.0],
+                                [NSNumber numberWithFloat:0.1],
                                 [NSNumber numberWithFloat:0.2],
                                 [NSNumber numberWithFloat:0.8],
                                 [NSNumber numberWithFloat:1.0], nil];
@@ -185,8 +187,10 @@
     
     float step = 1 / ((float)self.labels.count - 1);
     int n = floor(progress / step);
-    if(n < 0) {
+    if (n < 0) {
         n = 0;
+    } else if (n >= self.labels.count) {
+        n = (int)self.labels.count - 1;
     }
     
     float start = 0.0f;
