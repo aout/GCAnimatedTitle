@@ -48,6 +48,7 @@
     self.labels = [self addLabelsToScrollView:aScrollView];
     self.scrollView = aScrollView;
     self.scrollView.showsHorizontalScrollIndicator = NO;
+    self.scrollView.scrollsToTop = NO;
     [self addSubview:aScrollView];
     
     [self createOpacityLayer];
